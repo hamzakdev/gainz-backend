@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config()
 const productRoute = require('./routes/product')
 const userRoute = require('./routes/user')
 const orderRoute = require('./routes/order')
@@ -14,7 +14,7 @@ connectDatabase();
 
 //config :
 
-dotenv.config({path: "config.env"});
+// dotenv.config({path: "config.env"});
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors());
