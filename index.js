@@ -8,12 +8,8 @@ const connectDatabase = require('./db')
 const ErrorMiddleware = require('./middlewares/error')
 const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
 
 
-app.use(cors({
-    origin:"https://gainz-ecommerce.web.app"
-}));
 
 //connecting to database : 
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
