@@ -10,7 +10,7 @@ const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
-app.use(cors())
+app.use(cors({credentials:true}))
 
 
 //connecting to database : 
