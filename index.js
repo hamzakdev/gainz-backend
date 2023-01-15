@@ -10,7 +10,7 @@ const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
-app.use(cors({ origin:"http://localhost:3000"}))
+app.use(cors())
 
 
 //connecting to database : 
