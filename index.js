@@ -12,7 +12,7 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin:"https://gainz-ecommerce.web.app/"
+    origin:"https://gainz-ecommerce.web.app"
 }));
 
 //connecting to database : 
