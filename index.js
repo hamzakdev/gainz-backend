@@ -9,6 +9,10 @@ const ErrorMiddleware = require('./middlewares/error')
 const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+
+
+app.use(cors());
+
 //connecting to database : 
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
@@ -19,7 +23,7 @@ connectDatabase().then(app.listen(process.env.PORT, ()=>{
 // dotenv.config({path: "config.env"});
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors());
+
 
 
 //routes : 
