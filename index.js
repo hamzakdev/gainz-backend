@@ -3,7 +3,6 @@ const app = express();
 const dotenv = require('dotenv').config()
 const productRoute = require('./routes/product')
 const userRoute = require('./routes/user')
-const orderRoute = require('./routes/order')
 const connectDatabase = require('./db')
 const ErrorMiddleware = require('./middlewares/error')
 const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
@@ -30,7 +29,6 @@ app.use(cookieParser())
 
 app.use('/api/products', productRoute);
 app.use('/api/users', userRoute);
-app.use('/api/orders', orderRoute);
 
 
 //error handling :
