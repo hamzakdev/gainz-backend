@@ -15,7 +15,7 @@ const cors = require('cors')
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-app.use(cors({credentials:true, origin:"https://jungle-green-sea-urchin-wig.cyclic.app/"}))
+app.use(cors({credentials:true, origin:true}))
 
 
 
