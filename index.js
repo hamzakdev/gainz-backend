@@ -15,14 +15,14 @@ app.use(cors({credentials:true, origin:true}))
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-//            app.use((req,res,next)=>{
+           app.use((req,res,next)=>{
 //         res.header('Access-Control-Allow-Origin', 'https://gainz-ecommerce.web.app');
 //         res.header('Access-Control-Allow-Credentials', true);
-// //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
 
-//     next()
-//     })
+    next()
+    })
 
 
 
