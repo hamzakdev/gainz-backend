@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
 
-app.use(cors({credentials:true, origin:'gainz-ecommerce.web.app'}))
+app.use(cors({credentials:true, origin:true}))
 //connecting to database : 
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
