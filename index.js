@@ -15,7 +15,7 @@ const cors = require('cors')
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-app.use(cors())
+app.use(cors({credentials:true}))
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', true);
