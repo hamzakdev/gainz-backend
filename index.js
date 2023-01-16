@@ -15,8 +15,8 @@ const cors = require('cors')
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-   app.use((req,res,next)=>{
-        res.header('Access-Control-Allow-Origin', '*');
+    app.use((req,res,next)=>{
+        res.header('Access-Control-Allow-Origin', 'http://192.168.56.1:3000');
         res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
