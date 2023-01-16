@@ -61,6 +61,8 @@ router.post(
 
     const options = {
 //       httpOnly: true,
+	 sameSite: 'None',
+	 secure: true 
       expires: new Date(Date.now() + 86400000 * 5),
     };
 	const {isAdmin} = user._doc
