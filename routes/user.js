@@ -22,7 +22,7 @@ router.post(
     });
     const token = user.getJWTToken();
     const options = {
-//       httpOnly: true,
+      httpOnly: true,
       expires: new Date(Date.now() + 86400000 * 5),
     };
 
@@ -60,7 +60,7 @@ router.post(
     const token = user.getJWTToken();
 
     const options = {
-      httpOnly: true,
+//       httpOnly: true,
       expires: new Date(Date.now() + 86400000 * 5),
     };
 	const {isAdmin} = user._doc
