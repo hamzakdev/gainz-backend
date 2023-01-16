@@ -9,19 +9,19 @@ const AsyncErrorsMiddleware = require('./middlewares/asyncErrors');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
-
+app.use(cors())
 //connecting to database : 
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-           app.use((req,res,next)=>{
-        res.header('Access-Control-Allow-Origin', '*');
-        res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
+//            app.use((req,res,next)=>{
+//         res.header('Access-Control-Allow-Origin', '*');
+//         res.header('Access-Control-Allow-Credentials', true);
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
 
-    next()
-    })
+//     next()
+//     })
 
 
 
