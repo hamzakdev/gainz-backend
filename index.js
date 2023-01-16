@@ -15,13 +15,12 @@ const cors = require('cors')
 connectDatabase().then(app.listen(process.env.PORT, ()=>{
     console.log('server is running')
 }))
-app.use(cors({
-  "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204,
-    allowedHeaders: "content-type"
-}))
+ app.use(cors({credentials:true, origin:true}))
+    app.use((req,res,next)=>{
+        res.header('Access-Control-Allow-Origin', 'example.com');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    })
 
 
 
